@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Unique Elements" />
+    <title>Unique Elements</title>
+</head>
+<body>
+    <h2>Count Unique Elements</h2>
+    <script>
+        let names=["Meena", "John", "Jack", "Mary", "John", "Meena", "John"];
+        function uniqueArray(names){
+            for(i=0;i<names.length;i++){
+                for(j=i;j<names.length;j++){
+                    if(names[i]===names[j]){
+                        names.splice(j,1);
+                    }
+                }
+            }
+            return names.length;
+        }
+        console.log(uniqueArray(names));
+    </script>
+</body>
+</html>

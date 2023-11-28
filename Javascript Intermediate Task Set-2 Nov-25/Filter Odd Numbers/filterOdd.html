@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Filter Of Odd Numbers" />
+    <title>Filter Of Odd Numbers</title>
+</head>
+<body>
+    <h2>Filter Of Odd Numbers</h2>
+    <script>
+        let arr=[50, 45, 34, 65, 76, 34, 57, 54, 77, 97, 34, 56, 87, 88, 89, 54, 44];
+        let newArr=[];
+        arr.forEach(function(val){
+                if(val%2==1){
+                    newArr.push(val);
+                }
+            return newArr;
+        });
+        console.log(newArr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Occurence</title>
+</head>
+<body>
+    <h2>Last Occurence of an element</h2>
+    <script>
+        let names=["Meena", "John", "Meena", "Mary", "John", "Meena", "John"];
+        let index=0;
+        let found=0;
+        name="John";
+        function arrayLastIndex(names,name){
+            for(i=names.length-1;i>=0;i--){
+                if(i===0 && names[i]!==name)
+                    return -1;
+                if(names[i]===name)
+                    return i;
+            }
+        }
+        console.log(arrayLastIndex(names,name));
+    </script>
+</body>
+</html>

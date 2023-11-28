@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Remove Specific Element" />
+    <title>Remove Specific Element</title>
+</head>
+<body>
+    <h2>Remove Specific Element</h2>
+    <script>
+        let names=["Meena", "John", "Jack", "Mary", "John", "Meena", "John"];
+        let name="Meena"
+        let newArr=[];
+        function removeSpecific(names,name){
+            for(i=0;i<names.length;i++){
+                if(names[i]===name){
+                    names.splice(i,1);
+                }
+            }
+            newArr.push(names);
+            return newArr;
+        }
+        console.log(removeSpecific(names,name));
+    </script>
+</body>
+</html>

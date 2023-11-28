@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Smallest Number" />
+    <title>Smallest Number</title>
+</head>
+<body>
+    <h2>Smallest Numbers</h2>
+    <script>
+        let arr=[57, 54, 77, 97, 50, 45, 42, 65, 76, 43, 34, 56, 87, 88, 89, 54, 44];
+        let small=arr[0];
+        function smallest(arr){
+            for(const val of arr){
+                if(small>val){
+                 small=val;
+                }
+            }
+            return small;
+        }
+        console.log(smallest(arr));
+    </script>
+</body>
+</html>
