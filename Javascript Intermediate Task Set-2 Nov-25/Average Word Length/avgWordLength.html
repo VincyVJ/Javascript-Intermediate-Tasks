@@ -20,27 +20,29 @@
                 "Filing is going to join the growing list of things I no longer do.",
                 "if you're buying a new car, put security high on your list of priorities",
         ];
-        let newArr=[];
-        let averageArr=[];
-        let word="";
-        averageLength=0;
+        totalLength=0;
+        totalWord=0
         average=0;
-        for(let sentence of arr){
-            for(let i=0;i<sentence.length;i++){
-                if(sentence[i]==" "){
-                    newArr.push(word)
-                    word="";
+        wordArrays=[];
+
+        let eachSentence= function(sentence){
+            let newArr=[];
+            for(let i=0; i<sentence.length; i++){
+                if(sentence[i]==" "||sentence[i]=="."){
+                    totalWord++;
                 }else{
-                    word+=sentence[i];
+                    totalLength++;
                 }
             }
-            for(let word of newArr){
-                averageLength+=word.length;
-                average=averageLength/newArr.length;
-                averageArr.push(average);
-            }
+            average=totalLength/totalWord;
+           return average;
         }
-        console.log(averageArr);
+   
+
+        for(const sentence of arr){
+            wordArrays.push(eachSentence(sentence));
+        }
+        console.log(wordArrays);
     </script>
 </body>
 </html>
