@@ -10,17 +10,21 @@
     <h2>Count Unique Elements</h2>
     <script>
         let names=["Meena", "John", "Jack", "Mary", "John", "Meena", "John"];
+        console.log(names);
         function uniqueArray(names){
             for(i=0;i<names.length;i++){
-                for(j=i;j<names.length;j++){
+                for(j=i+1;j<names.length;j++){
                     if(names[i]===names[j]){
                         names.splice(j,1);
+                        i--;
                     }
                 }
             }
+            console.log("Array of unique elements is:");
+            console.log(names);
             return names.length;
         }
-        console.log(uniqueArray(names));
+        console.log("The length of unique array is "+uniqueArray(names));
     </script>
 </body>
 </html>
